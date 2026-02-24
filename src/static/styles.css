@@ -433,7 +433,8 @@ button {
 }
 
 .close-modal,
-.close-login-modal {
+.close-login-modal,
+.close-announcements-modal {
   position: absolute;
   right: 12px;
   top: 8px;
@@ -668,7 +669,130 @@ footer {
 .announcement-banner {
   background-color: var(--success);
   color: var(--primary-text);
-  text-align: center;
-  padding: 15px;
-  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.announcement-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.announcement-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.announcement-date {
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.95;
+}
+
+.announcements-modal-content {
+  width: min(920px, 95vw);
+  max-width: 920px;
+  max-height: 85vh;
+  overflow: auto;
+}
+
+.announcements-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.announcement-form-section,
+.announcement-list-section {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  background: var(--surface);
+}
+
+.announcement-form-section h4,
+.announcement-list-section h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+#announcement-message {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 84px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.secondary-button {
+  background-color: var(--border);
+  color: var(--text-primary);
+}
+
+.secondary-button:hover {
+  background-color: var(--border-focus);
+}
+
+.announcements-manager-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 48vh;
+  overflow: auto;
+}
+
+.announcement-manage-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--background);
+}
+
+.announcement-manage-item p {
+  margin-bottom: 8px;
+}
+
+.announcement-manage-meta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.announcement-manage-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.announcement-manage-actions button {
+  padding: 4px 10px;
+}
+
+@media (min-width: 900px) {
+  .announcements-layout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
 }
